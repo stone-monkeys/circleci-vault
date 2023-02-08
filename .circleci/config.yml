@@ -35,6 +35,9 @@ jobs:
     machine: true
     resource_class: db-cci-ns/macos-runner
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "$HOME/.ssh/id_rsa"
       - checkout
       - install-vault
       - vault-auto-auth
