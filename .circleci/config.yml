@@ -37,7 +37,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "derry/.ssh/id_rsa_0b:29:74:0c:ec:bd:57:8c:de:05:24:28:dc:20:8f:71"
+            - "derry/.ssh/id_rsa_de:25:99:fe:85:f6:0a:ad:6f:f5:42:bf:3f:02:ee:28"
       - checkout
       - install-vault
       - vault-auto-auth
