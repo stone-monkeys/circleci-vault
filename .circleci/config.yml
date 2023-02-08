@@ -54,10 +54,17 @@ version: 2.1
 workflows:
   testing:
     jobs:
+      - compute
       - runner-test
 jobs:
   runner-test:
     machine: true
     resource_class: db-cci-ns/macos-runner
+    steps:
+      - run: echo "Hi I'm on Runners!"
+  
+  compute:
+    docker: 
+      - image: cimg/node:17.2.0
     steps:
       - run: echo "Hi I'm on Runners!"
